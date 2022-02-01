@@ -509,8 +509,6 @@ fine_tune_model.compile(optimizer=keras.optimizers.SGD(learning_rate = 1e-5,mome
                         loss=keras.losses.SparseCategoricalCrossentropy(),
                         metrics=[keras.metrics.SparseCategoricalAccuracy()])
 
-# cringe_criterion = StoppingCriteria.EarlyStoppingByAccuracy(value=0.9999,
-#        patience=200)
 # Will multiply the learning rate by factor if no improvement is detected for patience times:
 # Notice that the patience is smaller than the one for the early stoppign criterion, otherwise there is no point here!
 reduce_lr_finetune = keras.callbacks.ReduceLROnPlateau(monitor='val_loss',
